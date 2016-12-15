@@ -1,0 +1,16 @@
+%h1.center
+  = @subscription.title
+
+%p
+  = @subscription.description
+
+%h4
+  Price:
+  = @subscription.price
+
+%h4
+  Quantity Left:
+  = @subscription.quantity
+
+.btn-center
+  =link_to "Subscribe", new_address_path, method: :get, class: "btn btn-primary"

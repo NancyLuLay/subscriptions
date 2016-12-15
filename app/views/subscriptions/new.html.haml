@@ -1,0 +1,6 @@
+%h1 Subscriptions Index
+
+-@subscription.each do |subscription|
+  -unless subscription.quantity <= 0
+    = link_to subscription.title, subscription_path(subscription)
+    <br/>

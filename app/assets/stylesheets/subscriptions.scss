@@ -1,0 +1,33 @@
+// Place all the styles related to the subscriptions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.panel {
+  margin-top: 30px;
+  transition: padding 0.5s;
+  -moz-transition: padding 0.5s; /* Firefox 4 */
+  -webkit-transition: padding 0.5s; /* Safari and Chrome */
+  -o-transition: padding 0.5s; /* Opera */
+  -ms-transition:padding 0.5s; /* IE9 (maybe) */
+}
+
+.panel:hover {
+	padding:10px;
+}
+
+.cd-currency{
+  display: inline-block;
+  margin-top: 10px;
+  vertical-align: top;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cd-value{
+  font-size: 7rem;
+  font-weight: 300;
+}
+
+.cd-duration{
+  font-size: 1.4rem;
+}

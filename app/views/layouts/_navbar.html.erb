@@ -1,0 +1,39 @@
+  <div class="nav-top">
+    <div class="parent">
+      <div class="out-logo">
+        <!-- <img src="../slogo.png" class="logo-top"> -->
+        <%= image_tag("slogo.png", class:"logo-top") %>
+      </div>
+      <div class="nav-title">Subscriptions</div>
+    </div>
+  </div>
+  <div class="menu">
+    <nav class="navbar">
+    <ul class="nav nav-pills">
+      <li><%= image_tag("slogo.png", class:"slogo") %></li>
+      <li role="presentation"><a href="/">Home</a></li>
+      <% if user_signed_in? %>
+        <!-- <li class="dropdown navbar-right">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
+          <ul class="dropdown-menu"> -->
+            <% if current_user.subscription_id == nil %>
+            <li><%= link_to "Subscriptions", subscriptions_path %></li>
+            <% end %>
+            <!-- <li role="separator" class="divider"></li> -->
+            <li class="navbar-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <li class="navbar-right"><%= link_to "Edit", edit_user_registration_path %></li>
+          <!-- </ul> -->
+        </li>
+
+      <% else  %>
+      <!-- <li class="dropdown navbar-right">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log In <span class="caret"></span></a>
+        <ul class="dropdown-menu"> -->
+          <li class="navbar-right"><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li class="navbar-right"><%= link_to "Sign In", new_user_session_path %></li>
+        <!-- </ul>
+      </li> -->
+      <% end %>
+    </ul>
+  </nav>
+  </div>

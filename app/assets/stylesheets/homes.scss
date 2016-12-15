@@ -1,0 +1,93 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	height: 400px !important;
+	width: 100%;
+}
+
+// sections
+.section{
+	background-color: #d4d4d4;
+	padding-bottom: 50px;
+}
+
+.section1{
+	background-image: url('blossom.jpg');
+	background-size: cover;
+}
+
+.sectitle{
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+  line-height: 55px;
+	font-weight: 700;
+  margin: 0 auto 31px;
+  text-align: center;
+	letter-spacing: 1px;
+	padding-top: 50px;
+}
+
+.sec-font-lg{
+	font-size: 55px;
+}
+
+.sec-font-md{
+	font-size: 30px;
+}
+
+.white{
+	color: white;
+}
+
+.section1-sub{
+	width: 30%;
+	margin: auto;
+}
+
+.contact-input{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  padding: 12.9px;
+  color: #1c1c1c;
+  background: #f2f2f2;
+  border: 1px solid #f0f0f0;
+  margin: 3px 0px 24px 0;
+  -webkit-border-radius: 2px;
+	color: black;
+}
+
+.btn-center{
+	text-align: center;
+}
+
+.contact-submit{
+	width: auto !important;
+	font-family: 'Montserrat', sans-serif;
+	background-color: grey;
+	font-size: 14px;
+	font-weight: 700;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	display: inline-block;
+	line-height: 1;
+	letter-spacing: 1px;
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 16px;
+	padding-bottom: 14px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+// Index
+.subs-index-back{
+	background: url('sloe.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}

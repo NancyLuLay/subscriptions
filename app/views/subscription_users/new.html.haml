@@ -1,0 +1,32 @@
+%h4 Your subscription:
+%h2=session[:subscription_title]
+
+%h3 Pay for your subscription (#{number_to_currency(session[:subscription_price])})
+
+= form_tag '', id: 'payment-form' do
+  .payment-errors
+  .form-group
+    = label_tag :card_number
+    = text_field_tag :card_number, '', { class: 'form-control',
+                                          data: { stripe: 'number' } }
+  .form-group
+    %label
+      %span Expiration (MM/YY)
+    %label
+      %span
+      = text_field_tag :exp_month, '', { size: 2,
+                                          data: { stripe: 'exp_month' } }
+    %span /
+    %label
+      %span
+      = text_field_tag :exp_year, '', { size: 2,
+                                      data: { stripe: 'exp_year' } }
+  .form-group
+    %label
+      = label_tag :cvc
+      = text_field_tag :cvc, '', { size: 4,
+                                    data: { stripe: 'cvc' } }
+  = submit_tag "Make the Payment", class: "btn btn-primary"
+
+= form_tag subscription_users_path, id: "server-form" do
+  = hidden_field_tag :stripe_token

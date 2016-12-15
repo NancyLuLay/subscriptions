@@ -1,0 +1,51 @@
+<div class="subs-index-back">
+  <div class="container">
+    <div class="row">
+      <% @subscription.each do |subscription| %>
+      <div class="col-md-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Simple Pricing Tables -->
+            <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9155049400353686"
+            data-ad-slot="6591520258"
+            data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+
+          <div class="panel-body text-center">
+            <p class="lead" style="font-size:30px"><strong><%= subscription.title  %></strong></p>
+          </div>
+          <div class="panel-body text-center">
+            <p class="lead" style="font-size:30px">
+              <span class="cd-currency">$</span>
+              <span class="cd-value"><%= subscription.price %></span>
+              <span class="cd-duration">/mo</span>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">
+              <span><i class="fa fa-pagelines" aria-hidden="true"></i></span> <%= subscription.description1 %>
+            </li>
+            <li class="list-group-item">
+              <span><i class="fa fa-users" aria-hidden="true"></i></span> <%= subscription.description2 %>
+            </li>
+            <li class="list-group-item">
+              <span><i class="fa fa-globe" aria-hidden="true"></i></span> <%= subscription.description3 %>
+            </li>
+          </ul>
+          <% if subscription.quantity > 0 %>
+          <div class="panel-footer"> <a class="btn btn-lg btn-block btn-danger" href="#">SUBSCRIBE</a> </div>
+          <% else %>
+          <div class="panel-footer"> <a class="btn btn-lg btn-block btn-danger" href="#">NOT AVAILABLE</a> </div>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

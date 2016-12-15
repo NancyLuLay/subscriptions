@@ -1,0 +1,49 @@
+.section
+  .container
+    .sectitle.sec-font-lg.black Growing your own vegetables has never been easier!
+    -# Carousel
+    #myCarousel.carousel.slide{"data-ride" => "carousel"}
+      / Indicators
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+        %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+        %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+      / Wrapper for slides
+      .carousel-inner{:role => "listbox"}
+        .item.active
+          %img{:alt => "Seedlings", :src => "seedling3.jpg"}/
+          .carousel-caption
+            %h3 Seedlings
+            %p Watch as they germinate and start to grow
+        .item
+          %img{:alt => "Seedlings", :src => "seedling5.jpg"}/
+          .carousel-caption
+            %h3 14 days old seedlings
+            %p Grown in beautiful British Columbia
+        .item
+          %img{:alt => "Seedlings", :src => "seedling6.jpg"}/
+          .carousel-caption
+            %h3 Seedlings
+            %p Watered carefully and kept warm
+      / Left and right controls
+      %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
+        %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+        %span.sr-only Previous
+      %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
+        %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+        %span.sr-only Next
+
+  .sectitle.sec-font-md WE HAVE THREE TYPES OF SUBSCRIPTIONS
+  .btn-center
+    =link_to "VIEW SUBSCRIPTION DETAILS", subscriptions_path, class: "btn hvr-pulse"
+
+.section1
+  .sectitle.sec-font-lg.white LET'S WORK TOGETHER.
+  .section1-sub
+    = form_for @contact do |f|
+      = f.text_field :name, class: "contact-input", placeholder: "NAME"
+      = f.email_field :email, class: "contact-input", placeholder: "EMAIL"
+      = f.text_field :subject, class: "contact-input", placeholder: "SUBJECT"
+      = f.text_area :message, class: "contact-input", placeholder: "MESSAGE"
+      .btn-center
+        = f.submit "SEND MESSAGE", class: "contact-submit"
