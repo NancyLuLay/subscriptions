@@ -49563,3 +49563,6 @@ Processing by Admin::ContactsController#show as HTML
   [1m[35mContact Load (0.6ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT 1  [["id", 5]]
   Rendered /Users/xnaaancy/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-3a16a1fc4596/app/views/active_admin/resource/show.html.arb (181.6ms)
 Completed 200 OK in 286ms (Views: 207.4ms | ActiveRecord: 1.6ms)
+  [1m[36mSubscription Load (44.8ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions"[0m
+  [1m[35mSubscription Load (0.4ms)[0m  SELECT "subscriptions".* FROM "subscriptions"
+  [1m[36mUser Load (85.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
